@@ -20,10 +20,10 @@ jobs:
           host: 3.111.34.200
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
+          target: next-app
           port: 22
           script: |
-            cd next-app
-            git pull 
+            git pull origin main
             npm install
             npm run build
             npm run start
